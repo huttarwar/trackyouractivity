@@ -1,5 +1,6 @@
 <h1>Activity Tracker</h1>
 
+
 <div>
     <div *ngFor="let todo of todos; let i=index" class="todoItem">
         <input type="checkbox" name="status" [(ngModel)]="todo.done"/>
@@ -7,10 +8,13 @@
         <span *ngIf="!todo.done">{{todo.newToDo}}</span> 
         <span *ngIf="todo.done" style="color:red"><s>{{todo.newToDo}}</s></span> 
     </div>
+    <form #f = "ngForm">
     <span *ngIf="todos.length == 0">No Activities to track! Start by adding one</span><br/>
-    <input id="newTodo" type="text" [(ngModel)]="newToDo">
+    <input id="newTodo" name="newTodo" type="text" [(ngModel)]="newToDo" required>
     <span *ngIf="error" style="color:red;">Please enter an activity!</span>
     <br/>
     <button id="addActivity" (click)="addMore()">Add an Activity!</button>
     <button id="clearAll" (click)="clearAll()">Clear All</button>
+   </form>
+
 </div>

@@ -22,12 +22,17 @@ export class AppComponent {
   }
   //Define your addMore function here
   addMore(){
+    
     let newToDoObj = {
       newToDo : this.newToDo,
       done : false
     }
+    console.log();
+  if(newToDoObj.newToDo.length>0){
     this.todos.push(newToDoObj);
     this.newToDo = '';
+      
+    }
   }
   //Define your clearAll function here
   clearAll(){

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //Define your variables done,todos,newToDo,newToDoObj,error
+  //Required variables done,todos,newToDo,newToDoObj,error 
   done:boolean;
   newToDo:'';
   newToDoObj:any;
@@ -14,13 +14,13 @@ export class AppComponent {
   todos:any[];
   marked = false;
 
-  //Define your constructor here with todos as [] ,newToDo as '' and error as false
+  //Constructor here with todos as [] ,newToDo as '' and error as false
   constructor(){
     this.todos = [];
     this.newToDo = '';
     this.error = false;
   }
-  //Define your addMore function here
+  //Function addMore here adds the activity in the array
   addMore(){
     
     let newToDoObj = {
@@ -34,7 +34,7 @@ export class AppComponent {
       
     }
   }
-  //Define your clearAll function here
+  //Function clearAll here clears all the activities from the array
   clearAll(){
     while (this.todos.length !== 0) {
     this.todos.pop();
